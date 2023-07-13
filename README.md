@@ -1,6 +1,8 @@
 # diff_drive_base_controller_ROS2
 Based on the original ROS1 base_controller program: [link](https://github.com/uuukinnn/diff_drive_controller)
 
+Rewritten in ROS2-APIs.
+
 For use with Kangaroo_x2_driver. 
 Program subscribes to /cmd_vel, and publishes to /joint_trajectory 
 
