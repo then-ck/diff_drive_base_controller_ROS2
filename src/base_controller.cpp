@@ -52,8 +52,8 @@ void base_controller::twist_cb( const geometry_msgs::msg::Twist::SharedPtr msg )
 
 	new_msg.header.stamp = this->get_clock()->now();
 
-	new_msg.points[0].velocities[0] = ( 0.5 * msg->linear.x - msg->angular.z * wheel_base ) / wheel_diam;
-	new_msg.points[0].velocities[1] = ( 0.5 * msg->linear.x + msg->angular.z * wheel_base ) / wheel_diam2;
+	new_msg.points[0].velocities[0] = ( 2.0 * msg->linear.x - msg->angular.z * wheel_base ) / wheel_diam;
+	new_msg.points[0].velocities[1] = ( 2.0 * msg->linear.x + msg->angular.z * wheel_base ) / wheel_diam2;
 
 	joint_traj_pub->publish( new_msg );
 }
